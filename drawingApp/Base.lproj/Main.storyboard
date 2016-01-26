@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="drawingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mtX-Fj-8Vk">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageDog.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ZLL-Kw-dJU">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="saP-hX-GW7" customClass="ACEDrawingView">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="568" id="XcY-LD-txd"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="ZLL-Kw-dJU" firstAttribute="leading" secondItem="mtX-Fj-8Vk" secondAttribute="leading" id="2eo-tJ-gVZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZLL-Kw-dJU" secondAttribute="bottom" id="Q6U-0c-xKS"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZLL-Kw-dJU" secondAttribute="trailing" id="RID-Wb-Kdd"/>
+                                    <constraint firstAttribute="trailing" secondItem="saP-hX-GW7" secondAttribute="trailing" id="YgN-9g-JVb"/>
+                                    <constraint firstItem="saP-hX-GW7" firstAttribute="top" secondItem="mtX-Fj-8Vk" secondAttribute="top" id="ab8-nO-e8M"/>
+                                    <constraint firstAttribute="bottom" secondItem="saP-hX-GW7" secondAttribute="bottom" id="baB-Zg-Ild"/>
+                                    <constraint firstItem="saP-hX-GW7" firstAttribute="leading" secondItem="mtX-Fj-8Vk" secondAttribute="leading" id="iDO-st-iCo"/>
+                                    <constraint firstItem="ZLL-Kw-dJU" firstAttribute="top" secondItem="mtX-Fj-8Vk" secondAttribute="top" id="uP7-cB-Mga"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="mtX-Fj-8Vk" secondAttribute="trailing" id="ORt-2T-rCc"/>
+                            <constraint firstItem="mtX-Fj-8Vk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="eew-LV-jG9"/>
+                            <constraint firstItem="mtX-Fj-8Vk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rZ6-2v-2ZR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mtX-Fj-8Vk" secondAttribute="bottom" id="ucm-cu-98o"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="cntV" destination="mtX-Fj-8Vk" id="mIN-pw-fVd"/>
+                        <outlet property="drawingView" destination="saP-hX-GW7" id="UQU-sI-tyE"/>
+                        <outlet property="imageView" destination="ZLL-Kw-dJU" id="Is4-0N-uw0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="389"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="imageDog.jpg" width="728" height="970"/>
+    </resources>
+</document>
